@@ -36,5 +36,19 @@ public class Numeros {
         
     }
     
+    public static int[] vectorDigits(int num){
+        int[] resultat=new int[String.valueOf(num).length()-(num>=0?0:1)];
+        boolean negatiu=(num<0);
+        if(negatiu) num*=-1;
+        for (int i = resultat.length-1; i >=0 ; i--) {
+            resultat[i]=num%10;
+            num/=10;
+        }
+        if(negatiu) resultat[0]*=-1;
+        
+        return resultat;
+    
+    }
+    
     
 }
