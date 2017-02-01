@@ -5,6 +5,7 @@
  */
 package exercicisdissenymodular;
 
+import static exercicisdissenymodular.Numeros.numVector;
 import static exercicisdissenymodular.Numeros.vectorDigits;
 
 /**
@@ -38,15 +39,15 @@ public class ExercicisDissenyModular {
 //        System.out.println("");
    
         
-//        System.out.println(subcadena("123456", 2, 5));
+//        System.out.println(subcadena(null, 2, 5));
 //        System.out.println("123456".substring( 2, 5));
 //        
-        int[] resultat=vectorDigits(+24);
-        for (int i = 0; i < resultat.length; i++) {
-            System.out.print(resultat[i]);
-            
-        }
-        System.out.println("");
+//        int[] resultat=vectorDigits(+24);
+//        for (int i = 0; i < resultat.length; i++) {
+//            System.out.print(resultat[i]);
+//            
+//        }
+        System.out.println(numVector(vectorDigits(-12345)));
         
     }
         

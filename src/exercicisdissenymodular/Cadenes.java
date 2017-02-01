@@ -34,7 +34,7 @@ public class Cadenes {
     
     public static String subcadena(String text, int inici, int fi){
     
-        if(text==null) return null;
+        if(text==null) return text=null;
         if(inici<0) inici=0;
         if(fi<=0 || inici>=text.length() || inici>=fi) return "";
         if(fi>text.length()) fi=text.length();
