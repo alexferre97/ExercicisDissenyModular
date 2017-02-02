@@ -5,8 +5,7 @@
  */
 package exercicisdissenymodular;
 
-import static exercicisdissenymodular.Numeros.numVector;
-import static exercicisdissenymodular.Numeros.vectorDigits;
+import static exercicisdissenymodular.Cadenes.buscaCadena;
 
 /**
  *
@@ -47,8 +46,12 @@ public class ExercicisDissenyModular {
 //            System.out.print(resultat[i]);
 //            
 //        }
-        System.out.println(numVector(vectorDigits(-12345)));
-        
+//
+        System.out.println(buscaCadena("la lola xala", "la", 0));
+        System.out.println(buscaCadena("la lola xala", "la", 1));
+        System.out.println(buscaCadena("la lola xala", "la", 6));
+        System.out.println(buscaCadena("la lola xala", "la", "la lola xala".length()-2));
+        System.out.println(buscaCadena("la lola xala", "la", "la lola xala".length()-1));
     }
         
     
