@@ -84,5 +84,31 @@ public class Cadenes {
         return (trobat?i:-1);
     }
     
+    public static int buscaCadenav2(String text, String subcadena, int posicio){
+    
+        //Tractem els casos especials
+        if(text==null || subcadena==null) return -1;
+        posicio=(posicio<0?0:posicio);
+        if(subcadena.length()==0) return (posicio<=text.length()?posicio:text.length());
+        if(posicio>=text.length()) return -1;
+        
+        //Usarem un booleà per saber si hem trobat la subcadena dins el text (inicialment no l'hem trobat, per tant és false)
+        boolean trobat=false;
+        
+        //Comencem la búsqueda a partir de la posicio, fins trobar la subcadena o arribar al final del text 
+        int i;
+        for (i = posicio; i < text.length() && !trobat; i++) {
+            //Per cada lletra del text la comparem en la primera de la subcadena, en cas de trobar coincidència la tractarem dins de l'if
+            if(subcadena(text,i,i+subcadena.length()).equals(subcadena)){
+                    //Actualitzem el booleà que ens dius que hem trobat la subcadena dins el text, posant-la a true
+                    trobat=true;
+                    //Forcem el fí del for per evitar que 'i' s'incremente en un, ja que ara mateix 'i' és el resultat a retornar 
+                    break;
+            }            
+        }
+    
+        //Si hem trobat la subcadena dins el text retornem 'i', i sinó retornem -1       
+        return (trobat?i:-1);
+    }
     
 }

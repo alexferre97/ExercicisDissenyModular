@@ -66,6 +66,9 @@ public class Numeros {
     //Rep com a paràmetre un vector que representa un número enter (en el format de l'exercici 7) i retorna el número enter representat
     public static int numVector(int[] num){
         
+        //Per evitar problemes, si el vector és null retornem 0, i així no tindrem l'excepció NullPointerException
+        if(num == null) return 0;
+        
         //La idea es recòrrer el vector de dreta a esquerra i per cada dígit multiplicar-lo per la potència de 10 adequada i anar sumant les diferents multiplicacions
         
         //variables locals
@@ -83,6 +86,9 @@ public class Numeros {
             factor*=10;
         }
         
+	//Si és negatiu lo dixem com estava inicialment
+        if(negatiu) num[0]*=-1;
+
         //Retornem el resultat obtingut, però en negatiu si cal
         return negatiu?resultat*-1:resultat;
     
