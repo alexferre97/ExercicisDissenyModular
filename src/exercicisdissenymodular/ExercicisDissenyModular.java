@@ -5,7 +5,7 @@
  */
 package exercicisdissenymodular;
 
-import static exercicisdissenymodular.Cadenes.buscaCadenav2;
+import static exercicisdissenymodular.Cadenes.buscaParaula;
 
 /**
  *
@@ -47,11 +47,11 @@ public class ExercicisDissenyModular {
 //            
 //        }
 //
-        System.out.println(buscaCadenav2("la lola xala", "la", 0));
-        System.out.println(buscaCadenav2("la lola xala", "la", 1));
-        System.out.println(buscaCadenav2("la lola xala", "la", 6));
-        System.out.println(buscaCadenav2("la lola xala", "la", "la lola xala".length()-2));
-        System.out.println(buscaCadenav2("la lola xala", "la", "la lola xala".length()-1));
+        System.out.println(buscaParaula("la lo la xa la", "la", 0));
+        System.out.println(buscaParaula("la lo la xa la", "la", 1));
+        System.out.println(buscaParaula("la lo la xa la", "la", 6));
+        System.out.println(buscaParaula("la lo la xa ,la.", "la", "la lola xala".length()-2));
+        System.out.println(buscaParaula("la lo la xa ,la,", "la", "la lola xala".length()-1));
     }
         
     
